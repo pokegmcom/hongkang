@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遊戲正式上線公告 - 像素精靈PokeHunt | 2026年1月20日</title>
+    <meta name="description" content="像素精靈PokeHunt於2026年1月20日正式上線公告。經典寵物小精靈，細緻還原數百種精靈的原生姿態與冒險核心！">
+    <meta name="keywords" content="像素精靈上線, PokeHunt公告, 遊戲上線, 開服公告, 像素精靈發布">
+    <meta name="author" content="Pokegm">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="遊戲正式上線公告 - 像素精靈PokeHunt">
+    <meta property="og:description" content="像素精靈於2026年1月20日正式上線，經典寵物小精靈，細緻還原數百種精靈">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://hongkong.pokegm.com/articles/article-1.html">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="logo.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B68EE',
+                        secondary: '#4CAF50',
+                        accent: '#FFD700',
+                        dark: '#2D2D2D',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+            line-height: 1.8;
+            color: #2D2D2D;
+            background-color: #F8F9FA;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .btn-3d {
+            border: 2px solid #7B68EE;
+            box-shadow: 0 4px 0 #5B4FC8;
+            transition: all 0.3s ease;
+        }
+        .btn-3d:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 0 #5B4FC8;
+        }
+        .btn-3d:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 0 #5B4FC8;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #7B68EE;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: none;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <img src="../logo.png" alt="像素精靈" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-primary">像素精靈</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="nav-link text-gray-700 hover:text-primary font-medium">首頁</a>
+                    <a href="../features.html" class="nav-link text-gray-700 hover:text-primary font-medium">遊戲特色</a>
+                    <a href="../guide.html" class="nav-link text-gray-700 hover:text-primary font-medium">遊戲攻略</a>
+                    <a href="../codes.html" class="nav-link text-gray-700 hover:text-primary font-medium">兌換碼</a>
+                    <a href="../articles.html" class="nav-link text-primary font-medium">文章資訊</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="btn-3d bg-primary text-white px-6 py-2 rounded-full font-semibold">立即下載</a>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="mobile-menu md:hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-3">
+                <a href="../index.html" class="block text-gray-700 hover:text-primary font-medium py-2">首頁</a>
+                <a href="../features.html" class="block text-gray-700 hover:text-primary font-medium py-2">遊戲特色</a>
+                <a href="../guide.html" class="block text-gray-700 hover:text-primary font-medium py-2">遊戲攻略</a>
+                <a href="../codes.html" class="block text-gray-700 hover:text-primary font-medium py-2">兌換碼</a>
+                <a href="../articles.html" class="block text-primary font-medium py-2">文章資訊</a>
+                <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="btn-3d bg-primary text-white px-6 py-2 rounded-full font-semibold inline-block text-center">立即下載</a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+                <div class="mb-8">
+                    <span class="bg-gradient-to-r from-primary to-purple-600 text-white text-sm font-bold px-4 py-1 rounded-full">公告</span>
+                    <span class="text-gray-400 text-sm ml-4">2026-01-20</span>
+                </div>
+                
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-dark">遊戲正式上線公告</h1>
+                
+                <div class="prose prose-lg max-w-none text-gray-600">
+                    <p class="text-xl font-semibold mb-6 text-dark">親愛的訓練家們：</p>
+                    
+                    <p class="mb-6">《像素精靈PokeHunt》於2026年1月20日上午10點正式上線！經典寵物小精靈，細緻還原數百種精靈的原生姿態與冒險核心！</p>
+                    
+                    <h2 class="text-2xl font-bold mb-4 text-dark mt-8">遊戲特色</h2>
+                    
+                    <div class="bg-light rounded-xl p-6 mb-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span><strong>還原內容：</strong>百分百還原經典精靈風貌，匯聚各方夥伴！</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span><strong>精靈形態：</strong>MEGA進化、巨大化，解放精靈全部形態！</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span><strong>祕寶增益：</strong>羈絆飾品，激活精靈潛藏實力！</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span><strong>探索冒險：</strong>開放式地圖關卡，發掘隱藏秘境！</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span><strong>競技對決：</strong>單人對決較量實力，爭奪巔峰排名！</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold mb-4 text-dark mt-8">開服福利</h2>
+                    
+                    <p class="mb-6">為了慶祝遊戲正式上線，我們為各位訓練家準備了豐富的開服福利！</p>
+                    
+                    <div class="bg-gradient-to-r from-primary to-purple-600 text-white rounded-xl p-6 mb-6">
+                        <h3 class="text-xl font-bold mb-4">禮包碼：【開服福利】</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between bg-white/20 rounded-lg p-3">
+                                <span>禮包碼1：ay6btcrx</span>
+                                <span class="text-sm">水晶*50、金幣*1w</span>
+                            </div>
+                            <div class="flex items-center justify-between bg-white/20 rounded-lg p-3">
+                                <span>禮包碼2：d7lsw8bu</span>
+                                <span class="text-sm">神奇糖果（中）*5、金幣*1w</span>
+                            </div>
+                            <div class="flex items-center justify-between bg-white/20 rounded-lg p-3">
+                                <span>禮包碼3：1frydl8n</span>
+                                <span class="text-sm">體力*50、疲勞值*100</span>
+                            </div>
+                            <div class="flex items-center justify-between bg-white/20 rounded-lg p-3">
+                                <span>禮包碼4：42binn3h</span>
+                                <span class="text-sm">普通卡牌隨機禮包*10、神奇糖果（中）*5</span>
+                            </div>
+                            <div class="flex items-center justify-between bg-white/20 rounded-lg p-3">
+                                <span>禮包碼5：y67gaamk</span>
+                                <span class="text-sm">水晶*100、金幣*1w</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold mb-4 text-dark mt-8">活動詳情</h2>
+                    
+                    <div class="space-y-4">
+                        <div class="card-hover bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                            <h3 class="font-bold text-lg mb-2 text-primary">登錄送禮</h3>
+                            <p class="text-gray-600">連續登錄7天，每天都能領取豐富獎勵！第7天更有神秘大禮等你來拿！</p>
+                        </div>
+                        <div class="card-hover bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                            <h3 class="font-bold text-lg mb-2 text-primary">在線獎勵</h3>
+                            <p class="text-gray-600">每日在線達到指定時間，即可領取對應獎勵，獎勵隨時間遞增！</p>
+                        </div>
+                        <div class="card-hover bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                            <h3 class="font-bold text-lg mb-2 text-primary">首充優惠</h3>
+                            <p class="text-gray-600">首次充值享受超值優惠，獲得雙倍獎勵！</p>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold mb-4 text-dark mt-8">聯繫我們</h2>
+                    
+                    <p class="mb-6">如果您在遊戲中遇到任何問題或有任何建議，歡迎通過以下方式聯繫我們：</p>
+                    
+                    <div class="bg-light rounded-xl p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fa fa-wechat text-primary mr-3"></i>
+                                <span>公眾號：小茂愛手游</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-qq text-primary mr-3"></i>
+                                <span>QQ群：1054734634</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-discord text-primary mr-3"></i>
+                                <a href="https://discord.gg/Pvkxz96V" class="text-primary hover:underline">Discord社區</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <p class="mt-8 text-lg">感謝各位訓練家的支持與厚愛，我們在像素精靈的世界裡等你！</p>
+                    
+                    <div class="mt-12 pt-8 border-t border-gray-200">
+                        <p class="text-gray-400 text-sm">發布時間：2026年1月20日</p>
+                        <p class="text-gray-400 text-sm">分類：公告</p>
+                    </div>
+                </div>
+                
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="../articles.html" class="btn-3d bg-primary text-white px-6 py-3 rounded-full font-semibold"><i class="fa fa-arrow-left mr-2"></i>返回文章列表</a>
+                    <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="btn-3d bg-accent text-dark px-6 py-3 rounded-full font-semibold"><i class="fa fa-download mr-2"></i>立即下載遊戲</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="bg-dark text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="../logo.png" alt="像素精靈" class="h-10 w-auto">
+                        <span class="text-xl font-bold">像素精靈</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">經典的復古像素怪物收集養成遊戲</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">快速連結</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="../index.html" class="hover:text-white transition-colors">首頁</a></li>
+                        <li><a href="../features.html" class="hover:text-white transition-colors">遊戲特色</a></li>
+                        <li><a href="../guide.html" class="hover:text-white transition-colors">遊戲攻略</a></li>
+                        <li><a href="../codes.html" class="hover:text-white transition-colors">兌換碼</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">聯繫我們</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><i class="fa fa-wechat mr-2"></i>公眾號：小茂愛手游</li>
+                        <li><i class="fa fa-qq mr-2"></i>QQ群：1054734634</li>
+                        <li><a href="https://discord.gg/Pvkxz96V" class="hover:text-white transition-colors"><i class="fa fa-discord mr-2"></i>Discord社區</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">關注我們</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://dh.nnii.cn/qqqun.jpg" class="text-gray-400 hover:text-white transition-colors text-2xl"><i class="fa fa-qrcode"></i></a>
+                        <a href="https://discord.gg/Pvkxz96V" class="text-gray-400 hover:text-white transition-colors text-2xl"><i class="fa fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 PokeHunt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

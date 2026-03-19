@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章資訊 - 像素精靈PokeHunt | 最新遊戲公告與攻略文章</title>
+    <meta name="description" content="像素精靈PokeHunt最新文章資訊，包括遊戲公告、更新日誌、攻略指南、活動資訊等。了解遊戲最新動態，提升遊戲體驗！">
+    <meta name="keywords" content="像素精靈文章, PokeHunt公告, 遊戲攻略, 更新日誌, 活動資訊, 遊戲新聞, 像素精靈資訊">
+    <meta name="author" content="Pokegm">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="文章資訊 - 像素精靈PokeHunt">
+    <meta property="og:description" content="像素精靈最新文章資訊，包括遊戲公告、更新日誌、攻略指南等">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://hongkong.pokegm.com/articles.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="logo.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B68EE',
+                        secondary: '#4CAF50',
+                        accent: '#FFD700',
+                        dark: '#2D2D2D',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+            line-height: 1.6;
+            color: #2D2D2D;
+            background-color: #F8F9FA;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .btn-3d {
+            border: 2px solid #7B68EE;
+            box-shadow: 0 4px 0 #5B4FC8;
+            transition: all 0.3s ease;
+        }
+        .btn-3d:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 0 #5B4FC8;
+        }
+        .btn-3d:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 0 #5B4FC8;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #7B68EE;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .category-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .category-badge.news {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .category-badge.guide {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .category-badge.event {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: none;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <img src="logo.png" alt="像素精靈" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-primary">像素精靈</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-primary font-medium">首頁</a>
+                    <a href="features.html" class="nav-link text-gray-700 hover:text-primary font-medium">遊戲特色</a>
+                    <a href="guide.html" class="nav-link text-gray-700 hover:text-primary font-medium">遊戲攻略</a>
+                    <a href="codes.html" class="nav-link text-gray-700 hover:text-primary font-medium">兌換碼</a>
+                    <a href="articles.html" class="nav-link text-primary font-medium">文章資訊</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="btn-3d bg-primary text-white px-6 py-2 rounded-full font-semibold">立即下載</a>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="mobile-menu md:hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-3">
+                <a href="index.html" class="block text-gray-700 hover:text-primary font-medium py-2">首頁</a>
+                <a href="features.html" class="block text-gray-700 hover:text-primary font-medium py-2">遊戲特色</a>
+                <a href="guide.html" class="block text-gray-700 hover:text-primary font-medium py-2">遊戲攻略</a>
+                <a href="codes.html" class="block text-gray-700 hover:text-primary font-medium py-2">兌換碼</a>
+                <a href="articles.html" class="block text-primary font-medium py-2">文章資訊</a>
+                <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="btn-3d bg-primary text-white px-6 py-2 rounded-full font-semibold inline-block text-center">立即下載</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative py-20 md:py-32 bg-gradient-to-br from-primary to-purple-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">文章資訊</h1>
+            <p class="text-lg md:text-2xl text-white/90 max-w-3xl mx-auto">了解遊戲最新動態，提升遊戲體驗</p>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap gap-4 mb-12 justify-center">
+                <button class="btn-3d bg-primary text-white px-6 py-2 rounded-full font-semibold">全部</button>
+                <button class="btn-3d bg-white text-gray-700 px-6 py-2 rounded-full font-semibold">公告</button>
+                <button class="btn-3d bg-white text-gray-700 px-6 py-2 rounded-full font-semibold">攻略</button>
+                <button class="btn-3d bg-white text-gray-700 px-6 py-2 rounded-full font-semibold">活動</button>
+                <button class="btn-3d bg-white text-gray-700 px-6 py-2 rounded-full font-semibold">更新</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="h-48 bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center">
+                        <i class="fa fa-newspaper-o text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="category-badge news text-white text-xs font-bold px-3 py-1 rounded-full">公告</span>
+                            <span class="text-gray-400 text-sm">2026-01-20</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">遊戲正式上線公告</h3>
+                        <p class="text-gray-600 mb-4">親愛的訓練家們，《像素精靈》於2026年1月20日正式上線！經典寵物小精靈，細緻還原數百種精靈的原生姿態與冒險核心！</p>
+                        <a href="articles/article-1.html" class="text-primary font-semibold hover:underline">閱讀更多 <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="h-48 bg-gradient-to-br from-secondary to-green-600 flex items-center justify-center">
+                        <i class="fa fa-book text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="category-badge guide text-white text-xs font-bold px-3 py-1 rounded-full">攻略</span>
+                            <span class="text-gray-400 text-sm">2026-01-18</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">新手入門完整攻略</h3>
+                        <p class="text-gray-600 mb-4">從零開始的怪物訓練師之路，詳細攻略指南！包括初始選擇、怪物培養、戰鬥技巧等全方位指導。</p>
+                        <a href="articles/article-2.html" class="text-primary font-semibold hover:underline">閱讀更多 <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="h-48 bg-gradient-to-br from-accent to-orange-500 flex items-center justify-center">
+                        <i class="fa fa-gift text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="category-badge event text-white text-xs font-bold px-3 py-1 rounded-full">活動</span>
+                            <span class="text-gray-400 text-sm">2026-01-15</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">開服福利活動詳情</h3>
+                        <p class="text-gray-600 mb-4">開服期間多重福利活動等你來參與！登錄送禮、在線獎勵、首充優惠等豐富活動詳情。</p>
+                        <a href="articles/article-3.html" class="text-primary font-semibold hover:underline">閱讀更多 <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="h-48 bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center">
+                        <i class="fa fa-refresh text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="category-badge text-white text-xs font-bold px-3 py-1 rounded-full">更新</span>
+                            <span class="text-gray-400 text-sm">2026-01-12</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">v1.0.1版本更新日誌</h3>
+                        <p class="text-gray-600 mb-4">遊戲首次版本更新，修復已知問題，優化遊戲體驗，新增多種怪物和功能！</p>
+                        <a href="#" class="text-primary font-semibold hover:underline">閱讀更多 <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                        <i class="fa fa-trophy text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="category-badge guide text-white text-xs font-bold px-3 py-1 rounded-full">攻略</span>
+                            <span class="text-gray-400 text-sm">2026-01-10</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">道館挑戰全攻略</h3>
+                        <p class="text-gray-600 mb-4">詳細的道館挑戰攻略，包括各個道館的推薦隊伍、戰鬥技巧和獎勵介紹。</p>
+                        <a href="#" class="text-primary font-semibold hover:underline">閱讀更多 <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center">
+                        <i class="fa fa-star text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="category-badge news text-white text-xs font-bold px-3 py-1 rounded-full">公告</span>
+                            <span class="text-gray-400 text-sm">2026-01-08</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">社群活動開啟公告</h3>
+                        <p class="text-gray-600 mb-4">官方社群活動正式開啟！參與社群活動，贏取豐富獎勵，與其他訓練師交流心得！</p>
+                        <a href="#" class="text-primary font-semibold hover:underline">閱讀更多 <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="btn-3d bg-primary text-white px-8 py-3 rounded-full font-semibold">加載更多文章</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-dark">熱門標籤</h2>
+            <div class="flex flex-wrap gap-3 justify-center">
+                <span class="bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-shadow cursor-pointer">新手攻略</span>
+                <span class="bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-shadow cursor-pointer">怪物培養</span>
+                <span class="bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-shadow cursor-pointer">道館挑戰</span>
+                <span class="bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-shadow cursor-pointer">兌換碼</span>
+                <span class="bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-shadow cursor-pointer">活動資訊</span>
+                <span class="bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-shadow cursor-pointer">版本更新</span>
+                <span class="bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-shadow cursor-pointer">屬性相剋</span>
+                <span class="bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-shadow cursor-pointer">技能組合</span>
+                <span class="bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-shadow cursor-pointer">怪物進化</span>
+                <span class="bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-shadow cursor-pointer">社交互動</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-gradient-to-r from-primary to-purple-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">訂閱我們的資訊</h2>
+            <p class="text-lg md:text-xl mb-8 text-white/90">關注我們的官方公眾號和社群，第一時間獲取最新資訊！</p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="https://dh.nnii.cn/qqqun.jpg" class="btn-3d bg-accent text-dark px-6 py-3 rounded-full font-semibold"><i class="fa fa-qrcode mr-2"></i>QQ群二維碼</a>
+                <a href="https://discord.gg/Pvkxz96V" class="btn-3d bg-white text-primary px-6 py-3 rounded-full font-semibold"><i class="fa fa-discord mr-2"></i>Discord社區</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="logo.png" alt="像素精靈" class="h-10 w-auto">
+                        <span class="text-xl font-bold">像素精靈</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">經典的復古像素怪物收集養成遊戲</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">快速連結</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition-colors">首頁</a></li>
+                        <li><a href="features.html" class="hover:text-white transition-colors">遊戲特色</a></li>
+                        <li><a href="guide.html" class="hover:text-white transition-colors">遊戲攻略</a></li>
+                        <li><a href="codes.html" class="hover:text-white transition-colors">兌換碼</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">聯繫我們</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><i class="fa fa-wechat mr-2"></i>公眾號：小茂愛手游</li>
+                        <li><i class="fa fa-qq mr-2"></i>QQ群：1054734634</li>
+                        <li><a href="https://discord.gg/Pvkxz96V" class="hover:text-white transition-colors"><i class="fa fa-discord mr-2"></i>Discord社區</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">關注我們</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://dh.nnii.cn/qqqun.jpg" class="text-gray-400 hover:text-white transition-colors text-2xl"><i class="fa fa-qrcode"></i></a>
+                        <a href="https://discord.gg/Pvkxz96V" class="text-gray-400 hover:text-white transition-colors text-2xl"><i class="fa fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 PokeHunt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

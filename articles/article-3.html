@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>開服福利活動詳情 - 像素精靈PokeHunt | 豐富活動等你參與</title>
+    <meta name="description" content="像素精靈PokeHunt開服期間多重福利活動詳情，包括登錄送禮、在線獎勵、首充優惠等豐富活動。">
+    <meta name="keywords" content="像素精靈活動, PokeHunt開服福利, 登錄送禮, 在線獎勵, 首充優惠, 遊戲活動">
+    <meta name="author" content="Pokegm">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="開服福利活動詳情 - 像素精靈PokeHunt">
+    <meta property="og:description" content="像素精靈開服期間多重福利活動詳情，登錄送禮、在線獎勵、首充優惠等">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://hongkong.pokegm.com/articles/article-3.html">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="logo.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B68EE',
+                        secondary: '#4CAF50',
+                        accent: '#FFD700',
+                        dark: '#2D2D2D',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+            line-height: 1.8;
+            color: #2D2D2D;
+            background-color: #F8F9FA;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .btn-3d {
+            border: 2px solid #7B68EE;
+            box-shadow: 0 4px 0 #5B4FC8;
+            transition: all 0.3s ease;
+        }
+        .btn-3d:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 0 #5B4FC8;
+        }
+        .btn-3d:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 0 #5B4FC8;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #7B68EE;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: none;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <img src="../logo.png" alt="像素精靈" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-primary">像素精靈</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="nav-link text-gray-700 hover:text-primary font-medium">首頁</a>
+                    <a href="../features.html" class="nav-link text-gray-700 hover:text-primary font-medium">遊戲特色</a>
+                    <a href="../guide.html" class="nav-link text-gray-700 hover:text-primary font-medium">遊戲攻略</a>
+                    <a href="../codes.html" class="nav-link text-gray-700 hover:text-primary font-medium">兌換碼</a>
+                    <a href="../articles.html" class="nav-link text-primary font-medium">文章資訊</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="btn-3d bg-primary text-white px-6 py-2 rounded-full font-semibold">立即下載</a>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="mobile-menu md:hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-3">
+                <a href="../index.html" class="block text-gray-700 hover:text-primary font-medium py-2">首頁</a>
+                <a href="../features.html" class="block text-gray-700 hover:text-primary font-medium py-2">遊戲特色</a>
+                <a href="../guide.html" class="block text-gray-700 hover:text-primary font-medium py-2">遊戲攻略</a>
+                <a href="../codes.html" class="block text-gray-700 hover:text-primary font-medium py-2">兌換碼</a>
+                <a href="../articles.html" class="block text-primary font-medium py-2">文章資訊</a>
+                <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="btn-3d bg-primary text-white px-6 py-2 rounded-full font-semibold inline-block text-center">立即下載</a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+                <div class="mb-8">
+                    <span class="bg-gradient-to-r from-accent to-orange-500 text-white text-sm font-bold px-4 py-1 rounded-full">活動</span>
+                    <span class="text-gray-400 text-sm ml-4">2026-01-15</span>
+                </div>
+                
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-dark">開服福利活動詳情</h1>
+                
+                <div class="prose prose-lg max-w-none text-gray-600">
+                    <p class="text-xl font-semibold mb-6 text-dark">開服期間多重福利活動等你來參與！</p>
+                    
+                    <div class="bg-gradient-to-r from-primary to-purple-600 text-white rounded-xl p-6 mb-6">
+                        <p class="font-bold text-lg">🎉 活動時間：2026年1月20日 - 2026年2月20日</p>
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold mb-4 text-dark mt-8">活動一：登錄送禮</h2>
+                    
+                    <p class="mb-6">連續登錄7天，每天都能領取豐富獎勵！第7天更有神秘大禮等你來拿！</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+                        <div class="card-hover bg-light rounded-xl p-4 text-center border-2 border-primary">
+                            <div class="text-2xl mb-2">📅</div>
+                            <h3 class="font-bold text-lg mb-2">第1天</h3>
+                            <p class="text-sm">金幣*5000、體力*20</p>
+                        </div>
+                        <div class="card-hover bg-light rounded-xl p-4 text-center border-2 border-primary">
+                            <div class="text-2xl mb-2">📅</div>
+                            <h3 class="font-bold text-lg mb-2">第2天</h3>
+                            <p class="text-sm">金幣*10000、神奇糖果（小）*3</p>
+                        </div>
+                        <div class="card-hover bg-light rounded-xl p-4 text-center border-2 border-primary">
+                            <div class="text-2xl mb-2">📅</div>
+                            <h3 class="font-bold text-lg mb-2">第3天</h3>
+                            <p class="text-sm">金幣*15000、普通卡牌隨機禮包*5</p>
+                        </div>
+                        <div class="card-hover bg-light rounded-xl p-4 text-center border-2 border-primary">
+                            <div class="text-2xl mb-2">📅</div>
+                            <h3 class="font-bold text-lg mb-2">第4天</h3>
+                            <p class="text-sm">金幣*20000、神奇糖果（中）*2</p>
+                        </div>
+                        <div class="card-hover bg-light rounded-xl p-4 text-center border-2 border-primary">
+                            <div class="text-2xl mb-2">📅</div>
+                            <h3 class="font-bold text-lg mb-2">第5天</h3>
+                            <p class="text-sm">金幣*25000、高級卡牌隨機禮包*3</p>
+                        </div>
+                        <div class="card-hover bg-light rounded-xl p-4 text-center border-2 border-primary">
+                            <div class="text-2xl mb-2">📅</div>
+                            <h3 class="font-bold text-lg mb-2">第6天</h3>
+                            <p class="text-sm">金幣*30000、神奇糖果（中）*3</p>
+                        </div>
+                        <div class="card-hover bg-gradient-to-br from-accent to-orange-500 text-white rounded-xl p-4 text-center md:col-span-2 lg:col-span-1">
+                            <div class="text-2xl mb-2">🎁</div>
+                            <h3 class="font-bold text-lg mb-2">第7天</h3>
+                            <p class="text-sm">神秘大禮包、金幣*50000</p>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold mb-4 text-dark mt-8">活動二：在線獎勵</h2>
+                    
+                    <p class="mb-6">每日在線達到指定時間，即可領取對應獎勵，獎勵隨時間遞增！</p>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="card-hover bg-white rounded-xl shadow-md p-4 border border-gray-100 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-4">
+                                    <i class="fa fa-clock text-white"></i>
+                                </div>
+                                <span class="font-bold">在線30分鐘</span>
+                            </div>
+                            <span class="text-gray-600">金幣*2000、體力*10</span>
+                        </div>
+                        <div class="card-hover bg-white rounded-xl shadow-md p-4 border border-gray-100 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-4">
+                                    <i class="fa fa-clock text-white"></i>
+                                </div>
+                                <span class="font-bold">在線60分鐘</span>
+                            </div>
+                            <span class="text-gray-600">金幣*5000、體力*20、神奇糖果（小）*2</span>
+                        </div>
+                        <div class="card-hover bg-white rounded-xl shadow-md p-4 border border-gray-100 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-4">
+                                    <i class="fa fa-clock text-white"></i>
+                                </div>
+                                <span class="font-bold">在線120分鐘</span>
+                            </div>
+                            <span class="text-gray-600">金幣*10000、體力*30、普通卡牌隨機禮包*3</span>
+                        </div>
+                        <div class="card-hover bg-white rounded-xl shadow-md p-4 border border-gray-100 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-4">
+                                    <i class="fa fa-clock text-white"></i>
+                                </div>
+                                <span class="font-bold">在線180分鐘</span>
+                            </div>
+                            <span class="text-gray-600">金幣*15000、體力*40、神奇糖果（中）*2</span>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold mb-4 text-dark mt-8">活動三：首充優惠</h2>
+                    
+                    <p class="mb-6">首次充值享受超值優惠，獲得雙倍獎勵！</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="card-hover bg-gradient-to-br from-secondary to-green-600 text-white rounded-xl p-6">
+                            <h3 class="font-bold text-xl mb-2">首充6元</h3>
+                            <p class="mb-4">原價：60水晶</p>
+                            <p class="text-2xl font-bold mb-2">獲得：120水晶</p>
+                            <p class="text-sm">+ 金幣*10000</p>
+                            <p class="text-sm">+ 神奇糖果（中）*5</p>
+                        </div>
+                        <div class="card-hover bg-gradient-to-br from-secondary to-green-600 text-white rounded-xl p-6">
+                            <h3 class="font-bold text-xl mb-2">首充30元</h3>
+                            <p class="mb-4">原價：300水晶</p>
+                            <p class="text-2xl font-bold mb-2">獲得：600水晶</p>
+                            <p class="text-sm">+ 金幣*50000</p>
+                            <p class="text-sm">+ 高級卡牌隨機禮包*10</p>
+                            <p class="text-sm">+ 神奇糖果（大）*3</p>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold mb-4 text-dark mt-8">活動四：等級達標</h2>
+                    
+                    <p class="mb-6">達到指定等級即可領取對應獎勵！</p>
+                    
+                    <div class="bg-light rounded-xl p-6 mb-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <i class="fa fa-star text-accent text-2xl mr-3"></i>
+                                <div>
+                                    <span class="font-bold">達到10級</span>
+                                    <p class="text-sm text-gray-600">金幣*10000、體力*50</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa fa-star text-accent text-2xl mr-3"></i>
+                                <div>
+                                    <span class="font-bold">達到20級</span>
+                                    <p class="text-sm text-gray-600">金幣*20000、普通卡牌隨機禮包*10</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa fa-star text-accent text-2xl mr-3"></i>
+                                <div>
+                                    <span class="font-bold">達到30級</span>
+                                    <p class="text-sm text-gray-600">金幣*30000、高級卡牌隨機禮包*5</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa fa-star text-accent text-2xl mr-3"></i>
+                                <div>
+                                    <span class="font-bold">達到40級</span>
+                                    <p class="text-sm text-gray-600">金幣*50000、神奇糖果（大）*5</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold mb-4 text-dark mt-8">活動五：分享有禮</h2>
+                    
+                    <p class="mb-6">邀請好友一起遊玩，雙方都能獲得豐富獎勵！</p>
+                    
+                    <div class="bg-gradient-to-r from-pink-500 to-rose-600 text-white rounded-xl p-6 mb-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fa fa-user-plus mr-3"></i>
+                                <span>邀請1位好友：金幣*5000、體力*30</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-user-plus mr-3"></i>
+                                <span>邀請3位好友：金幣*15000、普通卡牌隨機禮包*5</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-user-plus mr-3"></i>
+                                <span>邀請5位好友：金幣*30000、高級卡牌隨機禮包*3</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-user-plus mr-3"></i>
+                                <span>邀請10位好友：神秘大禮包</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-light rounded-xl p-6 mb-6">
+                        <h3 class="font-bold text-lg mb-4 text-dark">活動注意事項</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fa fa-info-circle text-primary mt-1 mr-3"></i>
+                                <span>所有活動獎勵需在活動時間內領取，過期將無法領取。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-info-circle text-primary mt-1 mr-3"></i>
+                                <span>每個賬號只能參與一次首充優惠活動。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-info-circle text-primary mt-1 mr-3"></i>
+                                <span>分享有禮活動中，被邀請的好友需達到10級才算有效邀請。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-info-circle text-primary mt-1 mr-3"></i>
+                                <span>活動最終解釋權歸像素精靈運營團隊所有。</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <p class="text-lg font-semibold text-dark mt-8">參與活動，快速成長！</p>
+                    <p class="mb-6">以上活動均可在遊戲內對應活動頁面參與，記得每天登錄領取獎勵哦！</p>
+                    
+                    <div class="mt-12 pt-8 border-t border-gray-200">
+                        <p class="text-gray-400 text-sm">發布時間：2026年1月15日</p>
+                        <p class="text-gray-400 text-sm">分類：活動</p>
+                    </div>
+                </div>
+                
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="../articles.html" class="btn-3d bg-primary text-white px-6 py-3 rounded-full font-semibold"><i class="fa fa-arrow-left mr-2"></i>返回文章列表</a>
+                    <a href="../codes.html" class="btn-3d bg-accent text-dark px-6 py-3 rounded-full font-semibold"><i class="fa fa-gift mr-2"></i>查看兌換碼</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="bg-dark text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="../logo.png" alt="像素精靈" class="h-10 w-auto">
+                        <span class="text-xl font-bold">像素精靈</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">經典的復古像素怪物收集養成遊戲</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">快速連結</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="../index.html" class="hover:text-white transition-colors">首頁</a></li>
+                        <li><a href="../features.html" class="hover:text-white transition-colors">遊戲特色</a></li>
+                        <li><a href="../guide.html" class="hover:text-white transition-colors">遊戲攻略</a></li>
+                        <li><a href="../codes.html" class="hover:text-white transition-colors">兌換碼</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">聯繫我們</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><i class="fa fa-wechat mr-2"></i>公眾號：小茂愛手游</li>
+                        <li><i class="fa fa-qq mr-2"></i>QQ群：1054734634</li>
+                        <li><a href="https://discord.gg/Pvkxz96V" class="hover:text-white transition-colors"><i class="fa fa-discord mr-2"></i>Discord社區</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">關注我們</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://dh.nnii.cn/qqqun.jpg" class="text-gray-400 hover:text-white transition-colors text-2xl"><i class="fa fa-qrcode"></i></a>
+                        <a href="https://discord.gg/Pvkxz96V" class="text-gray-400 hover:text-white transition-colors text-2xl"><i class="fa fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 PokeHunt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

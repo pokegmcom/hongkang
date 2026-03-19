@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新手入門完整攻略 - 像素精靈PokeHunt | 從零開始的怪物訓練師之路</title>
+    <meta name="description" content="像素精靈PokeHunt新手入門完整攻略，從零開始的怪物訓練師之路。包括初始選擇、怪物培養、戰鬥技巧、資源管理等全方位指導。">
+    <meta name="keywords" content="像素精靈新手攻略, PokeHunt入門指南, 怪物培養, 戰鬥技巧, 初始選擇, 資源管理, 遊戲攻略">
+    <meta name="author" content="Pokegm">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="新手入門完整攻略 - 像素精靈PokeHunt">
+    <meta property="og:description" content="像素精靈新手入門完整攻略，從零開始的怪物訓練師之路">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://hongkong.pokegm.com/articles/article-2.html">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="logo.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B68EE',
+                        secondary: '#4CAF50',
+                        accent: '#FFD700',
+                        dark: '#2D2D2D',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+            line-height: 1.8;
+            color: #2D2D2D;
+            background-color: #F8F9FA;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .btn-3d {
+            border: 2px solid #7B68EE;
+            box-shadow: 0 4px 0 #5B4FC8;
+            transition: all 0.3s ease;
+        }
+        .btn-3d:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 0 #5B4FC8;
+        }
+        .btn-3d:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 0 #5B4FC8;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #7B68EE;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: none;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <img src="../logo.png" alt="像素精靈" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-primary">像素精靈</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="nav-link text-gray-700 hover:text-primary font-medium">首頁</a>
+                    <a href="../features.html" class="nav-link text-gray-700 hover:text-primary font-medium">遊戲特色</a>
+                    <a href="../guide.html" class="nav-link text-gray-700 hover:text-primary font-medium">遊戲攻略</a>
+                    <a href="../codes.html" class="nav-link text-gray-700 hover:text-primary font-medium">兌換碼</a>
+                    <a href="../articles.html" class="nav-link text-primary font-medium">文章資訊</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="btn-3d bg-primary text-white px-6 py-2 rounded-full font-semibold">立即下載</a>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="mobile-menu md:hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-3">
+                <a href="../index.html" class="block text-gray-700 hover:text-primary font-medium py-2">首頁</a>
+                <a href="../features.html" class="block text-gray-700 hover:text-primary font-medium py-2">遊戲特色</a>
+                <a href="../guide.html" class="block text-gray-700 hover:text-primary font-medium py-2">遊戲攻略</a>
+                <a href="../codes.html" class="block text-gray-700 hover:text-primary font-medium py-2">兌換碼</a>
+                <a href="../articles.html" class="block text-primary font-medium py-2">文章資訊</a>
+                <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="btn-3d bg-primary text-white px-6 py-2 rounded-full font-semibold inline-block text-center">立即下載</a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+                <div class="mb-8">
+                    <span class="bg-gradient-to-r from-secondary to-green-600 text-white text-sm font-bold px-4 py-1 rounded-full">攻略</span>
+                    <span class="text-gray-400 text-sm ml-4">2026-01-18</span>
+                </div>
+                
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-dark">新手入門完整攻略</h1>
+                
+                <div class="prose prose-lg max-w-none text-gray-600">
+                    <p class="text-xl font-semibold mb-6 text-dark">從零開始的怪物訓練師之路，詳細攻略指南！</p>
+                    
+                    <h2 class="text-2xl font-bold mb-4 text-dark mt-8">第一步：選擇初始怪物</h2>
+                    
+                    <p class="mb-6">遊戲開始時會提供三種不同屬性的初始怪物供選擇，每種屬性都有其獨特的優勢和劣勢：</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-light rounded-xl p-4 text-center">
+                            <div class="text-3xl mb-2">🌿</div>
+                            <h3 class="font-bold text-lg mb-2">草系怪物</h3>
+                            <p class="text-sm">優勢：克制水系、岩石系<br>劣勢：被火系、飛行系克制</p>
+                        </div>
+                        <div class="bg-light rounded-xl p-4 text-center">
+                            <div class="text-3xl mb-2">🔥</div>
+                            <h3 class="font-bold text-lg mb-2">火系怪物</h3>
+                            <p class="text-sm">優勢：克制草系、蟲系、鋼系<br>劣勢：被水系、岩石系克制</p>
+                        </div>
+                        <div class="bg-light rounded-xl p-4 text-center">
+                            <div class="text-3xl mb-2">💧</div>
+                            <h3 class="font-bold text-lg mb-2">水系怪物</h3>
+                            <p class="text-sm">優勢：克制火系、岩石系、地面系<br>劣勢：被草系、電系克制</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-primary to-purple-600 text-white rounded-xl p-6 mb-6">
+                        <p class="font-bold mb-2">💡 選擇建議</p>
+                        <p>新手推薦選擇火系或水系，這兩種屬性在前期戰鬥中更為強力。當然，最重要的是選擇你喜歡的怪物！</p>
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold mb-4 text-dark mt-8">第二步：了解屬性相剋</h2>
+                    
+                    <p class="mb-6">屬性相剋是戰鬥中的核心機制，熟練運用可以讓你在戰鬥中佔據優勢：</p>
+                    
+                    <div class="bg-light rounded-xl p-6 mb-6">
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><i class="fa fa-fire text-orange-500 mr-3"></i>火系剋草系、蟲系、鋼系</li>
+                            <li class="flex items-center"><i class="fa fa-tint text-blue-500 mr-3"></i>水系剋火系、岩石系、地面系</li>
+                            <li class="flex items-center"><i class="fa fa-leaf text-green-500 mr-3"></i>草系剋水系、岩石系、地面系</li>
+                            <li class="flex items-center"><i class="fa fa-bolt text-yellow-500 mr-3"></i>電系剋水系、飛行系</li>
+                            <li class="flex items-center"><i class="fa fa-snowflake-o text-cyan-500 mr-3"></i>冰系剋草系、地面系、飛行系、龍系</li>
+                            <li class="flex items-center"><i class="fa fa-gavel text-gray-500 mr-3"></i>岩石系剋火系、飛行系、蟲系</li>
+                            <li class="flex items-center"><i class="fa fa-shield text-purple-500 mr-3"></i>鋼系剋冰系、岩石系、妖精系</li>
+                        </ul>
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold mb-4 text-dark mt-8">第三步：怪物培養策略</h2>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="card-hover bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                            <h3 class="font-bold text-lg mb-2 text-primary">專注主力怪物</h3>
+                            <p class="text-gray-600">遊戲初期的資源有限，建議專注培養2-3隻主力怪物，不要平均分配資源給所有怪物。</p>
+                        </div>
+                        <div class="card-hover bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                            <h3 class="font-bold text-lg mb-2 text-primary">合理分配經驗</h3>
+                            <p class="text-gray-600">讓主力怪物參與更多戰鬥獲得經驗值，快速提升等級和解鎖新技能。</p>
+                        </div>
+                        <div class="card-hover bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                            <h3 class="font-bold text-lg mb-2 text-primary">掌握進化時機</h3>
+                            <p class="text-gray-600">了解每隻怪物的進化條件，在適當的時機進化可以獲得屬性提升和新技能。</p>
+                        </div>
+                        <div class="card-hover bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                            <h3 class="font-bold text-lg mb-2 text-primary">裝備羈絆飾品</h3>
+                            <p class="text-gray-600">羈絆飾品可以大幅提升怪物屬性，為主力怪物裝備合適的飾品。</p>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold mb-4 text-dark mt-8">第四步：戰鬥技巧</h2>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="card-hover bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                            <h3 class="font-bold text-lg mb-2 text-primary">屬性克制優先</h3>
+                            <p class="text-gray-600">戰鬥前先查看敵人屬性，派出克制敵人的怪物進行戰鬥。</p>
+                        </div>
+                        <div class="card-hover bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                            <h3 class="font-bold text-lg mb-2 text-primary">技能搭配使用</h3>
+                            <p class="text-gray-600">合理搭配不同屬性的技能，注意技能的冷卻時間和效果。</p>
+                        </div>
+                        <div class="card-hover bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                            <h3 class="font-bold text-lg mb-2 text-primary">保留必殺技</h3>
+                            <p class="text-gray-600">必殺技通常有較長的冷卻時間，建議在關鍵時刻使用。</p>
+                        </div>
+                        <div class="card-hover bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                            <h3 class="font-bold text-lg mb-2 text-primary">觀察敵人行為</h3>
+                            <p class="text-gray-600">注意敵人的技能使用模式，提前做好應對準備。</p>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold mb-4 text-dark mt-8">第五步：資源管理</h2>
+                    
+                    <div class="bg-light rounded-xl p-6 mb-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa fa-gem text-accent mt-1 mr-3"></i>
+                                <span><strong>水晶：</strong>珍貴資源，用於抽取高級卡牌和購買稀有道具，建議節約使用。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-coins text-yellow-500 mt-1 mr-3"></i>
+                                <span><strong>金幣：</strong>基礎貨幣，用於怪物升級和購買基礎道具，通過戰鬥和任務獲得。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-heartbeat text-red-500 mt-1 mr-3"></i>
+                                <span><strong>體力：</strong>用於進行探索和戰鬥，會隨時間自動恢復。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-battery-quarter text-blue-500 mt-1 mr-3"></i>
+                                <span><strong>疲勞值：</strong>怪物戰鬥後會產生疲勞，需要休息才能恢復。</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold mb-4 text-dark mt-8">第六步：探索與收集</h2>
+                    
+                    <p class="mb-6">像素精靈擁有廣闊的開放世界，充滿了各種神秘區域和稀有怪物：</p>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="card-hover bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                            <h3 class="font-bold text-lg mb-2 text-primary">探索不同區域</h3>
+                            <p class="text-gray-600">每個區域都有獨特的怪物和環境，盡可能多地探索各個區域。</p>
+                        </div>
+                        <div class="card-hover bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                            <h3 class="font-bold text-lg mb-2 text-primary">收集稀有怪物</h3>
+                            <p class="text-gray-600">稀有怪物通常出現在特定區域或特定時間，多加留意。</p>
+                        </div>
+                        <div class="card-hover bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                            <h3 class="font-bold text-lg mb-2 text-primary">完成探索任務</h3>
+                            <p class="text-gray-600">探索任務可以獲得豐富獎勵，包括稀有道具和怪物。</p>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold mb-4 text-dark mt-8">第七步：社交互動</h2>
+                    
+                    <p class="mb-6">與其他玩家交流可以讓你的遊戲體驗更加豐富：</p>
+                    
+                    <div class="bg-gradient-to-r from-secondary to-green-600 text-white rounded-xl p-6 mb-6">
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><i class="fa fa-users mr-3"></i>加入官方QQ群：1054734634</li>
+                            <li class="flex items-center"><i class="fa fa-wechat mr-3"></i>關注公眾號：小茂愛手游</li>
+                            <li class="flex items-center"><i class="fa fa-discord mr-3"></i>加入Discord社區：https://discord.gg/Pvkxz96V</li>
+                        </ul>
+                    </div>
+                    
+                    <p class="text-lg font-semibold text-dark mt-8">總結</p>
+                    <p class="mb-6">像素精靈是一款充滿樂趣的怪物收集養成遊戲，掌握以上新手攻略，你將能夠快速上手並享受遊戲的樂趣。記住，最重要的是享受遊戲過程，與其他訓練師一起成長！</p>
+                    
+                    <div class="mt-12 pt-8 border-t border-gray-200">
+                        <p class="text-gray-400 text-sm">發布時間：2026年1月18日</p>
+                        <p class="text-gray-400 text-sm">分類：攻略</p>
+                    </div>
+                </div>
+                
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="../articles.html" class="btn-3d bg-primary text-white px-6 py-3 rounded-full font-semibold"><i class="fa fa-arrow-left mr-2"></i>返回文章列表</a>
+                    <a href="../guide.html" class="btn-3d bg-accent text-dark px-6 py-3 rounded-full font-semibold"><i class="fa fa-book mr-2"></i>查看更多攻略</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="bg-dark text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="../logo.png" alt="像素精靈" class="h-10 w-auto">
+                        <span class="text-xl font-bold">像素精靈</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">經典的復古像素怪物收集養成遊戲</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">快速連結</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="../index.html" class="hover:text-white transition-colors">首頁</a></li>
+                        <li><a href="../features.html" class="hover:text-white transition-colors">遊戲特色</a></li>
+                        <li><a href="../guide.html" class="hover:text-white transition-colors">遊戲攻略</a></li>
+                        <li><a href="../codes.html" class="hover:text-white transition-colors">兌換碼</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">聯繫我們</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><i class="fa fa-wechat mr-2"></i>公眾號：小茂愛手游</li>
+                        <li><i class="fa fa-qq mr-2"></i>QQ群：1054734634</li>
+                        <li><a href="https://discord.gg/Pvkxz96V" class="hover:text-white transition-colors"><i class="fa fa-discord mr-2"></i>Discord社區</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">關注我們</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://dh.nnii.cn/qqqun.jpg" class="text-gray-400 hover:text-white transition-colors text-2xl"><i class="fa fa-qrcode"></i></a>
+                        <a href="https://discord.gg/Pvkxz96V" class="text-gray-400 hover:text-white transition-colors text-2xl"><i class="fa fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 PokeHunt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
